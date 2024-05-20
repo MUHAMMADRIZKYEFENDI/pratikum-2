@@ -118,6 +118,12 @@ Records: 2  Duplicates: 0  Warnings: 0
 ![Screenshot (62)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/bfd6b224-9008-45d6-8151-8543a1e610e6)
 
 # 2. Hapus satu record data pada table dosen yang telah dirujuk pada tabel mahasiswa.
+-- Delete a record from the Dosen table that is not referenced by any record in the Mahasiswa table
+DELETE FROM Dosen
+WHERE kd_ds = 'DS001'
+AND NOT EXISTS (
+    SELECT 1 FROM Mahasiswa WHERE kd_ds = 'DS001'
+);
 
 # 3. Ubah mode menjadi ON UPDATE CASCADE ON DELETE RESTRICT
 # 4. Lakukan perubahan data pada table dosen (kd_ds)
