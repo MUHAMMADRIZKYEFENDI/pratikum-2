@@ -115,7 +115,10 @@ MariaDB [Universitas]> INSERT INTO Mahasiswa (nim, nama, jenis_kelamin, tgl_lahi
 Query OK, 2 rows affected (0.001 sec)
 Records: 2  Duplicates: 0  Warnings: 0
 
+![Screenshot (62)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/bfd6b224-9008-45d6-8151-8543a1e610e6)
+
 # 2. Hapus satu record data pada table dosen yang telah dirujuk pada tabel mahasiswa.
+
 # 3. Ubah mode menjadi ON UPDATE CASCADE ON DELETE RESTRICT
 # 4. Lakukan perubahan data pada table dosen (kd_ds)
 # 5. Lakukan penghapusan data pada table dosen
