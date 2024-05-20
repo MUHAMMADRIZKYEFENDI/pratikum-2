@@ -127,8 +127,9 @@ AND NOT EXISTS (
 ![Screenshot (64)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/30d44a17-994a-41bf-a6ac-3bd0c7f1212e)
 
 # 3. Ubah mode menjadi ON UPDATE CASCADE ON DELETE RESTRICT
-
+![Screenshot (65)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/7f77078b-8871-47d5-ac8d-d681aaf7873b)
 # 4. Lakukan perubahan data pada table dosen (kd_ds)
+
 # 5. Lakukan penghapusan data pada table dosen
 # 6. Ubah mode menjadi ON UPDATE CASCADE ON DELETE SET NULL
 # 7. Lakukan penghapusan data pada table dosen
