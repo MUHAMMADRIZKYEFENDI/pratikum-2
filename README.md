@@ -96,3 +96,28 @@ MariaDB [kampus]> ALTER TABLE Mahasiswa
 Query OK, 0 rows affected (0.026 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ![Screenshot (56)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/fdc30ee1-2158-452d-bb53-d236d5ad8276)
+
+# 1. Lakukan penambahan data pada table mahasiswa dengan mengisi kd_ds yang belum ada pada data dosen.
+MariaDB [Universitas]> -- Tambahkan data ke tabel Dosen
+MariaDB [Universitas]> INSERT INTO Dosen (kd_ds, nama)
+    -> VALUES
+    ->     ('DS001', 'Dr. Ahmad Yani'),
+    ->     ('DS002', 'Prof. Budi Santoso');
+Query OK, 2 rows affected (0.007 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [Universitas]>
+MariaDB [Universitas]> -- Tambahkan data ke tabel Mahasiswa dengan kd_ds yang valid
+MariaDB [Universitas]> INSERT INTO Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)
+    -> VALUES
+    ->     ('2023456789', 'John Doe', 'M', '2000-01-01', 'Jl. Kebon Jeruk No. 1', 'Jakarta', '12345', '08123456789', 'DS001'),
+    ->     ('2023456790', 'Jane Smith', 'F', '1999-12-12', 'Jl. Mangga Dua No. 5', 'Bandung', '67890', '08234567890', 'DS002');
+Query OK, 2 rows affected (0.001 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+# 2. Hapus satu record data pada table dosen yang telah dirujuk pada tabel mahasiswa.
+# 3. Ubah mode menjadi ON UPDATE CASCADE ON DELETE RESTRICT
+# 4. Lakukan perubahan data pada table dosen (kd_ds)
+# 5. Lakukan penghapusan data pada table dosen
+# 6. Ubah mode menjadi ON UPDATE CASCADE ON DELETE SET NULL
+# 7. Lakukan penghapusan data pada table dosen
