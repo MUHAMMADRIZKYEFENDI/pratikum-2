@@ -124,8 +124,10 @@ WHERE kd_ds = 'DS001'
 AND NOT EXISTS (
     SELECT 1 FROM Mahasiswa WHERE kd_ds = 'DS001'
 );
+![Screenshot (64)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/30d44a17-994a-41bf-a6ac-3bd0c7f1212e)
 
 # 3. Ubah mode menjadi ON UPDATE CASCADE ON DELETE RESTRICT
+
 # 4. Lakukan perubahan data pada table dosen (kd_ds)
 # 5. Lakukan penghapusan data pada table dosen
 # 6. Ubah mode menjadi ON UPDATE CASCADE ON DELETE SET NULL
