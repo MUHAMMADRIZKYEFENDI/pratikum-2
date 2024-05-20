@@ -1,4 +1,4 @@
-# pratikum-2
+# pratikum-3
 ![Screenshot (57)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/3136d11c-1e55-4891-81e9-df093de2eada)
 1.Buat DDL Script berdasarkan skema ERD tersebut diatas.
 
@@ -141,3 +141,30 @@ AND NOT EXISTS (
 
 # 7. Lakukan penghapusan data pada table dosen
 ![Screenshot (69)](https://github.com/MUHAMMADRIZKYEFENDI/pratikum-2/assets/168548623/c8703061-f238-4668-93ec-a69cd2196136)
+
+# Tulis semua perintah-perintah SQL percobaan di atas beserta outputnya!
+
+# Apa bedanya penggunaan RESTRICT dan penggunaan CASCADE
+Bedanya Penggunaan RESTRICT dan CASCADE:
+RESTRICT: Ketika Anda menggunakan ON DELETE RESTRICT dalam definisi kunci asing, itu berarti bahwa tidak akan memungkinkan untuk menghapus baris induk dari tabel yang berhubungan jika ada baris anak yang bergantung padanya. Dalam kasus ini, DELETE akan gagal dan melemparkan pesan kesalahan.
+
+CASCADE: Ketika Anda menggunakan ON DELETE CASCADE, itu berarti ketika baris induk dihapus, semua baris anak yang bergantung padanya juga akan dihapus secara otomatis. Dalam hal ini, DELETE akan merambat ke baris anak dan menghapusnya juga.
+
+Jadi, perbedaan utama antara RESTRICT dan CASCADE adalah bagaimana perilaku penghapusan diproses ketika ada baris anak yang bergantung pada baris induk yang akan dihapus.
+
+# Berikan kesimpulan anda!
+### Kesimpulan:
+
+1. **Pembuatan Tabel**: Dalam praktikum ini, kami telah membuat beberapa tabel dalam database, termasuk tabel untuk Dosen, Mahasiswa, Matakuliah, Jadwal Mengajar, dan KRS Mahasiswa. Setiap tabel memiliki struktur yang ditentukan, termasuk kunci utama dan kunci asing yang didefinisikan untuk menjaga integritas data.
+
+2. **Penambahan Data**: Kami telah menambahkan data ke dalam tabel Dosen dan Mahasiswa menggunakan perintah INSERT. Ini memungkinkan kami untuk memasukkan informasi tentang dosen dan mahasiswa ke dalam database.
+
+3. **Penghapusan Data**: Kami juga telah melakukan percobaan dengan menghapus data dari tabel Dosen. Namun, kita menemui masalah dengan kunci asing yang menyebabkan kesalahan. Ini menunjukkan pentingnya memahami konstrain kunci asing dan bagaimana cara mengelolanya dengan benar.
+
+4. **Perubahan Kunci Asing**: Kami telah mencoba mengubah mode kunci asing di tabel Mahasiswa untuk menggunakan `ON UPDATE CASCADE` dan `ON DELETE SET NULL`. Namun, kami mengalami kesalahan dalam percobaan ini, yang menunjukkan kompleksitas dalam mengelola kunci asing.
+
+5. **Perbedaan Antara RESTRICT dan CASCADE**: Kami juga mempelajari perbedaan antara `RESTRICT` dan `CASCADE` dalam konteks konstrain kunci asing. Ini adalah konsep penting dalam desain database yang mempengaruhi bagaimana data dihapus atau diubah.
+
+Secara keseluruhan, praktikum ini memberikan pemahaman yang lebih baik tentang bagaimana mendesain, membuat, dan mengelola struktur database, serta pentingnya memahami konsep konstrain kunci asing. Hal ini dapat membantu dalam pengembangan aplikasi yang membutuhkan manipulasi data yang aman dan konsisten.
+
+# Buat laporan praktikum yang berisi, langkah-langkah praktikum beserta screenshot yang sudah dilakukan dalam bentuk dokumen.
