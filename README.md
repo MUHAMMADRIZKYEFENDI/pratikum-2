@@ -144,6 +144,68 @@ AND NOT EXISTS (
 
 # Tulis semua perintah-perintah SQL percobaan di atas beserta outputnya!
 
+
+- Membuat foreign key
+
+Dalam ALTER TABLE:
+```
+ALTER TABLE mahasiswa
+ADD CONSTRAINT fk_dosen
+FOREIGN KEY (kd_ds) REFERENCES dosen(kd_ds)
+```
+
+Dalam CREATE TABLE:
+```
+CREATE TABLE mahasiswa(
+nim VARCHAR(10) NOT NULL,
+nama VARCHAR(100) NOT NULL,
+kd_ds VARCHAR(10),
+PRIMARY KEY(nim),
+CONSTRAINT fk_Dosen FOREIGN KEY (kd_ds)
+REFERENCES dosen(kd_ds)
+);
+```
+
+- Mengubah data
+```
+UPDATE mahasiswa
+SET kd_ds = 'DS001' WHERE nim = 112233445;
+```
+
+- Menampilkan CREATE TABLE
+```
+SHOW CREATE TABLE  mahasiswa;
+Mode ON UPDATE CASCADE ON DELETE CASCADE
+```
+```
+ALTER TABLE mahasiswa
+DROP FOREIGN KEY fk_mahasiswa_dosen,
+ADD CONSTRAINT fk_dosen FOREIGN KEY (kd_ds) REFERENCES dosen(kd_ds) ON UPDATE CASCADE ON DELETE CASCADE;
+```
+
+- Menghapus data
+```
+DELETE FROM dosen WHERE kd_ds = 'DS001';
+Mode ON UPDATE CASCADE ON DELETE NOT NULL
+```
+```
+ALTER TABLE <table>
+DROP FOREIGN KEY <nama_constraint_lama>,
+ADD CONSTRAINT <nama_constraint_baru> FOREIGN KEY (field) REFERENCES <table_references(filed_references)> ON UPDATE CASCADE ON DELETE NOT NULL;
+```
+
+- Mengubah data
+```
+UPDATE dosen
+SET kd_ds = 'DS006' WHERE nama = 'Haha Hihi';
+```
+
+- Menghapus data
+```
+DELETE FROM dosen WHERE nim = 'DS003';
+```
+
+
 # Apa bedanya penggunaan RESTRICT dan penggunaan CASCADE
 Bedanya Penggunaan RESTRICT dan CASCADE:
 RESTRICT: Ketika Anda menggunakan ON DELETE RESTRICT dalam definisi kunci asing, itu berarti bahwa tidak akan memungkinkan untuk menghapus baris induk dari tabel yang berhubungan jika ada baris anak yang bergantung padanya. Dalam kasus ini, DELETE akan gagal dan melemparkan pesan kesalahan.
